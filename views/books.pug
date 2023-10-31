@@ -5,10 +5,15 @@ block content
   
   - let results = [{title: "KGF", author: "Sai", yearOfPublish:2019},{title: "Bhahubali", author: "Sumanth", yearOfPublish:2016},{title: "RRR", author: "Dinesh", yearOfPublish:2022}];
 
+  script.
+    function buy(index){
+      alert("You purchased items " + (index+1));
+    }
+
   div.container-fluid
     div.row
-        each book in results
-            div.col-sm-2
+        each book, index in results
+            div.col-sm-2(onClick = `buy(${index})`)
                 p Title:  #{book.title}
                 p Author: #{book.author}
                 p Year Of Published: #{book.yearOfPublish}
