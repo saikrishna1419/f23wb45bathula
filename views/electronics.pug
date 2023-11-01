@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   
-  - let results = [{productName: "S23", brand: "Samsung", price: '$900'},{productName: "15pro", brand: "Apple", price: '$999'},{productName: "10R", brand: "Oneplus", price:2022}];
+  - let results = [{productName: "S23", brand: "Samsung", price: '$799'},{productName: "15pro", brand: "Apple", price: '$999'},{productName: "10R", brand: "Oneplus", price:699}];
 
   script.
     function buy(index){
@@ -17,3 +17,5 @@ block content
                 p Product Name:  #{electronics.productName}
                 p Brand: #{electronics.brand}
                 p Price: #{electronics.price}
+
+    a(href="/choose") Choose
