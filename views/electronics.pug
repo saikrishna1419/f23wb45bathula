@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  
+  - let results = [{productName: "S23", brand: "Samsung", price: '$900'},{productName: "15pro", brand: "Apple", price: '$999'},{productName: "10R", brand: "Oneplus", price:2022}];
+
+  script.
+    function buy(index){
+      alert("You purchased items " + (index+1));
+    }
+
+  div.container-fluid
+    div.row
+        each electronics, index in results
+            div.col-sm-2(onClick = `buy(${index})`)
+                p Product Name:  #{electronics.productName}
+                p Brand: #{electronics.brand}
+                p Price: #{electronics.price}
